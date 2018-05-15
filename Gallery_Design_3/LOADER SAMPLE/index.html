@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.loader {
+  border: 10px solid #b0b0b0;
+  border-radius: 50%;
+  border-top: 10px solid #93006f;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  z-index: +1;
+  position: absolute;
+  margin: auto;
+  bottom: calc(50% - 25px);
+  left:  calc(50% - 25px);
+  display: none;
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.vdo
+{
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 700px)
+{
+  .vdo
+  {
+    width: 50%;
+  }
+}
+
+  .box
+  {
+    font-family: sans-serif;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #dddddd;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container
+  {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .button
+  {
+    padding: 15px;
+    background-color: #aa0000;
+    border-radius: 10px;
+    margin: 5px;
+    color: #ffffff;
+    font-size: 30px;
+    width: 43%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .imaged
+  {
+    display: block;
+    margin: auto;
+    width: 90%;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .en_box_header
+  {
+    width: 100%;
+    display: none;
+  }
+  .ch_box_header
+  {
+    width: 100%;
+    display: block;
+  }
+  @media screen and (max-width: 800px)
+  {
+
+    .button
+    {
+      width: 40%;
+    }
+
+  }
+
+
+
+.loading {
+  background: url('loader.gif') center no-repeat;
+}
+</style>
+</head>
+<body>
+
+<div style="position: relative;">
+    <img src="http://2.bp.blogspot.com/-EUHTmbZha6M/TtdK7vBO2yI/AAAAAAAADaY/UIhf45Pyha4/s1600/14-kareena-kapoor-sexy-photo.jpg" style="max-width: 100%;position: relative;background-color: #ff0000;display: block;margin: auto;" onwaiting="load_loader2()" onload="close_loader2()"></img>
+    <div class="loader" id="loader2"></div>
+    <script>
+      function load_loader2()
+      {
+          document.getElementById('loader2').style.display="block";
+      }
+      function close_loader2()
+      {
+          document.getElementById('loader2').style.display="none";
+      }
+    </script>
+</div>
+
+<div style="position: relative;">
+    <video class="vdo" controls poster="http://coconutc.com/P/Images/IM1.gif" onwaiting="load_loader1()" onplaying="close_loader1()">
+    					  <source src="http://coconutc.com/P/Videos/IM1.mp4" type="video/mp4">
+    </video>
+    <div class="loader" id="loader1" style="display: none"></div>
+    <script>
+      function load_loader1()
+      {
+          document.getElementById('loader1').style.display="block";
+      }
+      function close_loader1()
+      {
+          document.getElementById('loader1').style.display="none";
+      }
+    </script>
+</div>
+
+
+<div class="container">
+    <div class="box">
+
+          <div class="ch_box_header">
+                    <h1>Lili Pauline Reinhart</h1>
+          </div>
+          <div class="en_box_header">
+                    <h1>Lili Pauline Reinhart</h1>
+          </div>
+          <!--Buttons start-->
+          <div class="button" onclick="prev()">
+                    <
+          </div>
+          <div class="button" onclick="next()">
+                    >
+          </div>
+          <!--Buttons End-->
+
+          <!--Image Start-->
+          <div class="imaged">
+                    <img id="displaying_img" class="loading" src="http://www.yawmiyetna.com/wp-content/uploads/2017/02/Sonam-Kapoor.png" alt="xiao chan" style="max-width: 100%;">
+          </div>
+          <!--Image End-->
+
+          <!--Buttons start-->
+          <div class="button" onclick="prev()">
+                    <
+          </div>
+          <div class="button" onclick="next()">
+                    >
+          </div>
+          <!--Buttons End-->
+
+    </div><!--Box end-->
+    <!--Buuton script start-->
+    <script>
+            var imgs=[
+              "http://www.yawmiyetna.com/wp-content/uploads/2017/02/Sonam-Kapoor.png",
+              "https://photos.filmibeat.com/ph-big/2013/06/raanjhanna-promotion-jhalak-dikhhla-jaa-6_137169735014.jpg",
+              "https://www.hdwallpapers.in/walls/master_chief_emilia_clarke_4k-HD.jpg",
+              "https://www.hdwallpapers.in/walls/lili_reinhart_hot_2018_4k-wide.jpg",
+              "https://pbs.twimg.com/media/DAKU6lKVoAAUoet.jpg",
+              "http://i.dailymail.co.uk/i/pix/2017/07/23/21/42979BF000000578-4722968-Too_sweet_Lili_Reinhart_put_a_sexy_twist_on_her_character_Betty_-a-72_1500842032320.jpg",
+              "https://wallpapersite.com/images/pages/pic_w/2493.jpg"
+            ];
+            var count=0;
+            function next()
+            {
+              count++;
+              if(count>(imgs.length-1))
+              {
+                count=0;
+              }
+              var f=document.getElementById('displaying_img');
+              f.src="blank.gif";
+              f.src=imgs[count];
+
+            }
+            function prev()
+            {
+              count--;
+              if(count<0)
+              {
+                count=imgs.length-1;
+              }
+              var f=document.getElementById('displaying_img');
+              f.src="blank.gif";
+              f.src=imgs[count];
+
+            }
+
+    </script>
+    <!--Buuton script end-->
+</div><!--container end-->
+<p style="font-family: sans-serif">
+It is important to load this blank image like this<br>
+</p>
+<img src="blank.gif"/>
+
+</body>
+</html>

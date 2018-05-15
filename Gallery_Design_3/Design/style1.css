@@ -1,0 +1,174 @@
+body
+{
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+  .box
+  {
+    font-family: sans-serif;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #dddddd;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container
+  {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .button, .button1, .button2, .button3, .button4
+  {
+    padding: 15px 5px;
+    background-color: #aa0000;
+    border-radius: 10px;
+    margin: 5px;
+    color: #ffffff;
+    font-size: 30px;
+    width: 33%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	cursor: pointer;
+  }
+
+  .imaged
+  {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-height: 70vh;
+    border-radius: 5px;
+  }
+
+  .en_lang
+  {
+
+    display: none;
+  }
+  .ch_lang
+  {
+    display: block;
+  }
+  .box_header
+  {
+  width: 100%;
+  }
+  .side_fixed_nav
+  {
+    width: 20%;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0.7;
+    margin-right: 2.5%;
+    border-radius: 5px;
+    display: block;
+    color: #ffffff;
+    padding: 15px 10px;
+    font-family: sans-serif;
+  }
+  #content
+  {
+    width: 75%;
+  }
+  #main_header
+  {
+    width: 91.5%;
+    padding: 50px;
+    font-size: 80px;
+    text-align: center;
+    font-family: Sans-serif;
+    background-color: #880000;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+div#navd
+{
+  display: none;
+}
+div.lan
+{
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background-color: #006600;
+  margin: 10px 20px;
+  margin-left: 50%;
+}
+
+div.dkg a:link
+{
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  width: 85%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #444444;
+}
+div.dkg a:visited
+{
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  width: 85%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #444444;
+}
+div.dkg a:hover
+{
+  background-color: #222222;
+}
+  /*For mobiles*/
+  @media screen and (max-width: 700px)
+  {
+    body
+    {
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    .button
+    {
+      width: 40%;
+    }
+    .side_fixed_nav
+    {
+      display: none;
+    }
+    #content
+    {
+      width: 100%;
+      margin: 0px 3px;
+    }
+
+    #main_header
+    {
+      width: 91.5%;
+      padding: 20px;
+      font-size: 40px;
+      text-align: center;
+      font-family: Sans-serif;
+      background-color: #880000;
+      color: #ffffff;
+      margin:0px 0px 0px 0px;
+    }
+
+    div#navd
+    {
+      display: block;
+      color: #ffffff;
+      background-color: #000000;
+      width: 100%;
+      padding: 0px 10px;
+      margin:0px 0px 10px 0px;
+      font-size: 40px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
